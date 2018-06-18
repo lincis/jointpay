@@ -1,0 +1,27 @@
+@startuml
+
+class WalletProvider {
+    void CreateWallet()
+    void Transfer()
+    void CashIn()
+    void CashOut()
+}
+class Database {
+}
+class Application {
+    void RegisterUser()
+    void RegisterSociety()
+    void SubscribeSociety()
+    void UnsubscribeSociety()
+    void AddEvent()
+    void SendPushNotifications()
+    void UnregisterUser()
+    void UnregisterSociety()
+    void ManageUser()
+    void ManageSociety()
+}
+
+WalletProvider <|.. Application
+Database <|.. Application
+
+@enduml
