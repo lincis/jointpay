@@ -1,0 +1,43 @@
+@startuml
+!define table(x) class x << (T,#FFAAAA) >>
+!define pk(x) <u>x</u>
+
+table(USERS){
+  pk(user_id)
+  email
+  given_name
+  family_name
+  paypal_account
+}
+
+table(SOCIETIES){
+  pk(society_id)
+  name
+  last_activity
+}
+
+table(USER_SOCIETIES){
+  user_id
+  society_id
+}
+
+table(EVENTS){
+  pk(event_id)
+  society_id
+  name
+  owner
+  target_user
+  deadline
+  amount
+}
+
+table(USER_EVENTS){
+  user_id
+  event_id
+}
+
+table(USER_PP_HISTORY){
+  user_id
+  paypal_account
+}
+@enduml
