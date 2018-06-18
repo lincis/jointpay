@@ -1,0 +1,3 @@
+authentification - Auth0
+wallet - paypal
+database - postgres
