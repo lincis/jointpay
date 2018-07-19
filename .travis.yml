@@ -5,9 +5,10 @@ language: python
 services:
     - docker
 
-before_install:
+before_script:
     - docker-compose -f db/docker-compose.yml build
     - docker-compose -f db/docker-compose.yml up &
+    - pip install tavern[pytest]
 
 script:
     - py.test db/*.tavern.yaml
