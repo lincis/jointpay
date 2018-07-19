@@ -1,0 +1,19 @@
+# Every test file has one or more tests...
+test_name: Test user test data
+
+# ...and each test has one or more stages (e.g. an HTTP request)
+stages:
+  - name: Select user by ID
+
+    # Define the request to be made...
+    request:
+      url: http://0.0.0.0:3000/users?id=eq.c8463d64-8b52-11e8-9eb6-529269fb1459
+      method: GET
+
+    # ...and the expected response code and body
+    response:
+      status_code: 200
+      body:
+        first_name: John
+        last_name: Doe
+        email: john.doe@mail.com

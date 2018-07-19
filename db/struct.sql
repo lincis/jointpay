@@ -15,6 +15,8 @@ create table users (
     unique (email)
 );
 
+copy users from '/tmp/test-data/users.csv' with (format csv);
+
 create table communities (
     id uuid not null default uuid_generate_v1(),
     name varchar(256) not null,
